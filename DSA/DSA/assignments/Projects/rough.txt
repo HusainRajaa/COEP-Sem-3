@@ -1,0 +1,132 @@
+General Purpose Registers :
+AX
+BX
+CX
+DX
+
+Segment Registers
+CS
+DS
+ES
+SS
+IP
+
+Special Purpose Registers
+SP 
+BP 
+
+Addressing Modes
+1. Register Addressing
+    MOV AX, BX
+2. Immediate Addressing
+    MOV AX, 1420H
+3. Direct Addressing
+    MOV AX, [2340H]
+4. Register Indirect Addressing
+    MOV AX, [BX]
+5. Base-plux-Index Addressing
+    MOV AX, [BX+SI]
+6. Register Relative Addressing
+    MOV AX, [BX+40]
+7. Base relative-plus-indexed Addressing
+    MOV AX, [BX+SI+10]
+8. Scaled Indexed Addressing    
+    Not possible in 8086
+
+8086 Assembly Language to Machine Language
+
+Byte1   1 0 0 0 1 0 D W
+Byte2   MOD REG R/M
+Byte3   LowDisp
+Byte4   HighDisp
+Byte5   Dir Addr LB
+Byte6   Dir Addr HB
+
+D =>    1 Data flow to the REG field from R/M
+        0 Data flow from the REG field to the R/M
+
+W =>    1 16bits
+        0 8bits
+
+MOV
+Register/Memory to/from Register    1 0 0 0 1 0 d W mod reg r/m
+Immediate to Register/Memory        1 1 0 0 0 1 1 W mod 0 0 0 r/m data data if w 1
+Immediate to Register               1 0 1 1 w reg data data if w 1
+Memory to accumulator               1 0 1 0 0 0 0 w add-low add-high
+Acumulator to Memory                1 0 1 0 0 0 1 w add-low add-high
+Register/Memory to SegmentRegister  1 0 0 0 1 1 1 0 mod 0 reg r/M
+SegmentRegister to Register/Memory  1 0 0 0 1 1 0 0 mod 0 reg r/M
+
+
+AX 000
+CX 001
+DX 010
+BX 011
+SP 100
+BP 101
+SI 110
+DI 111
+
+AL 000
+CL 001
+DL 010
+BL 011
+AH 100
+CH 101
+DH 110
+BH 111
+
+ES 00
+CS 01
+SS 10
+DS 11
+
+mod 00  disp = 0 except for 16bit displacement when r/m = 110
+mod 01  8 bit disp & disp high is absent
+mod 10 16 bit disp
+mod 11 Register Mode(no displacement) r/m is treated as reg field
+
+if r/m == 000 then EA == (BX) + (SI) + DISP
+if r/m == 001 then EA == (BX) + (DI) + DISP
+if r/m == 010 then EA == (BP) + SI + DISP
+if r/m == 011 then EA == (BP) + (DI) + DISP
+if r/m == 100 then EA == (SI) + DISP
+if r/m == 101 then EA = (DI) + DISP
+if r/m == 110 then EA == (BP) + DISP
+if r/m == 111 then EA == (BX) + DISP
+
+
+
+MOV [AX], [BX + SI + DISP]
+1 0 0 0      1 0 1 1        1 0 0 0         0 0 0 0 
+8            B              8               0
+
+
+A. FIND OPCODE OF INSTRUCTION:
+1. Check MOV, Add
+2. Check first operand
+    a. does it have brackets or no brackets until ','
+        i. what is inside brackets 
+    b. what is the operand 
+    c. is it 16 bit operand or 8 bit operand
+3. Check second operand
+    a. does it have brackets or no brackets
+        i. what is inside brackets
+    b. What is the operand
+    c. is it 16 bit operand or 8 bit operand
+    d. Check the displacement
+4. Find reg code
+5. Find r/m code
+6. Find mod code
+7. Find D
+8. Find w
+9. Find disp
+    a. check if it is 16 bit displacement or 8 bit displacement
+    b. break it into two bytes if it is 16 bit
+10. Write all bits in the 32 bits
+11. Breakdown these into four parts of 8 bits
+12. Form the opcode 
+
+B. PERFORM THE INSTRUCTION USING MEMORY 
+
+C. OUTPUT WHAT IS EXACTLY HAPPENED IN THE CPU AND INSTRUCTION EXECUTION

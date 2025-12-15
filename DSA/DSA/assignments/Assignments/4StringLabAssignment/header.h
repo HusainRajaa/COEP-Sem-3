@@ -1,0 +1,18 @@
+int countOccurrences(char* str, char ch);
+char *my_strtok(char *str, const char *delim);
+int longestSubsequence(char *str1, char *str2, char **subseq);
+int gcd(int a, int b);
+int lcm(int a, int b);
+char *decimalToBinary(int n, char *binary);
+int my_strcasecmp(const char *s1, const char *s2);
+char *my_strsep(char **stringp, const char *delim);
+int my_strcoll(const char *s1, const char *s2);
+double my_sin(double x);
+double my_cos(double x);
+double my_asin(double x);
+double my_acos(double x);
+double my_tan(double x);
+int reverseInteger(int number);
+int isAllDigits(const char *str);
+void rev(char *str);
+char *cutonchar(char *str, char ch);

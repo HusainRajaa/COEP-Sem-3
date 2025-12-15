@@ -1,0 +1,20 @@
+Function 1 : Infix Enxpression to Postfix Expression - O(n)
+	
+The time complexity of the infix to postfix algorithm is O(n), where n is the length of infix expression. Analysis : Since we go over each character 
+of the infix expression once, and only one operation/method is applicable for each character. Also the stack is only updated n individual 
+times, n being the number of operators and parenthesis. Hence, the time complexity is O(n). 
+
+Function 2 : Expression Tree using Postfix Expression - O(n)
+
+The time complexity to create the expression tree from the given postfix expression is O(n). Analysis : Since each character of the postfix expression is 
+only visited once, and the operations are done individually  and the stack is also updated n times (n is length of postfix expression).
+Hence, the time complexity is O(n). 
+
+Function 3 : Inorder Traversal - O(n)
+
+Through analysis of the worst cases of the binary tree(ex. Skewed Tree) and the recursive nature of the inorder traversal algorithm, each node is visited 
+once and hence the time complexity for all cases comes out to be O(n), n being the number of nodes.
+
+Function 4 : Compute/ Evaluation of Expression Tree - O(n)
+
+The time complexity of the compute function is O(n), as each node is only visited once, and n is the total number of nodes in the expression tree. 

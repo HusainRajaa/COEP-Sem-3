@@ -1,0 +1,16 @@
+float MaxBetweenTwo(float a , float b);
+void Check(float a);
+void CheckDivisibleBy5And11(int a);
+void EvenOdd(int a);
+void isLeapYear(int year);
+void AlphabetCheck(char ch);
+void VowelConsonant(char ch);
+void AlphabetDigitSpecialChar(char ch);
+void UppercaseLowercase(char ch);
+int NumberOfDaysInMonth(int mn);
+void AnglesOfTriangle(float a, float b, float c);
+void TypeOfTriangle(float a, float b, float c);
+void RootsOfQuadratiEquation(float a, float b, float c);
+char Grade(float a , float b , float c, float d, float e);
+float GrossSalary(float basic_salary);
+float ElectricityBill(int units);

@@ -1,0 +1,48 @@
+1. File Handling
+2. C Fundamentals - Pointers
+3. Array ADT
+    ArrayADTFinal✅
+4. Polynomial ADT
+    PolynomialADT✅
+5. SLL
+    SLLFinal✅
+    LinkedListTanishq✅
+6. DLL
+    DLLFinal
+7. CLL
+    FinalCLL
+8. Polynomial using LL
+    PolynomialADT in SLL✅
+9. Stack 
+10. Stack Using Array✅
+11. Stack Using LL✅
+12. Stack Using Queue
+    StackUsingQueue✅
+13. Stack Application - Paranthesis Matching, Infix to Postfix and Evaluation of Postfix Array
+14. Stack Application - Paranthesis Matching, Infix to Postfix and Evaluation of Postfix LL
+15. Queue (CIRCULAR QUEUE)
+16. Queue Using Array 
+17. Queue Using LL 
+18. Queue Using Stack
+    QueueUsingStack
+19. Trees - BT (Theory from PPT)
+20. Binary Search Tree Using Arrays
+    BinaryTree
+21. Binary Search Tree Using LL
+    ClassCodeBST
+22. Inorder Preorder Postorder Traversals of BST
+    ClassCodeBST
+23. Heap Using Array
+24. Graphs Using AdjMatrix/ AdjLists
+    ClassCode
+25. BFS, DFS & DFS recursive and Cycle Detection Using AdjMatrix/ AdjLists✅
+    ClassCode
+26. Minimum Spanning Tree✅
+27. Prim's Algorithm Using AdjMatrix/ AdjLists✅
+    ClassCode
+28. Dijkstra's Algorithm✅
+    ClassCode
+29. Sorting Algorithms - Bubble/ Insertion/ Selection/ Quick✅
+    ArrayADT
+30. Seaching Algorithms - Linear/ Binary✅
+    ArrayADT
